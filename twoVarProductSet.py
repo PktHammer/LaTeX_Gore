@@ -22,7 +22,7 @@ def latexMathModeify(toBeMathed): # Temporary, will update with exceptions soon
 def main():
     A = ['w', 'x', 'y', 'z']
     B = ['a', 'b']
-    twovarproduct(B,B)
+    twovarproduct(A,B)
 
 if __name__ == "__main__":
     main()
