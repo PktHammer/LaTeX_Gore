@@ -5,10 +5,6 @@ def twovarproduct(A,B):
         for y in range(len(B)):
             storedOutput += '(' + str(A[x]) + ', ' + str(B[y]) + '), '
     storedOutput = storedOutput[:-2] # Slice the last character
-    #print(storedOutput)
-    storedOutput = latexFormatArray(storedOutput)
-    storedOutput = latexMathModeify(storedOutput)
-
     return storedOutput
     
 def latexFormatArray(product):
@@ -26,10 +22,15 @@ def main():
     
     # Main
     Answer = twovarproduct(A,B)
-    
+
+    # Formatting
+    Answer = latexFormatArray(Answer)
+    Answer = latexMathModeify(Answer)
+
     # Output
     print('Total: ' + str(len(A) * len(B)) + ';', end= ' ')
     print(Answer)
+
 
 if __name__ == "__main__":
     main()
