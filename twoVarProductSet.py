@@ -21,7 +21,7 @@ def latexMathModeify(toBeMathed): # Temporary, will update with exceptions soon
     return toBeMathed
 
 def main():
-    # List Defnition
+    # List Definition
     A = ['twentymillion','w', 'x', 'y', 'z']
     B = ['a', 'infinityplus', 'b']
     
