@@ -8,8 +8,8 @@ def twovarproduct(A,B):
     #print(storedOutput)
     storedOutput = latexFormatArray(storedOutput)
     storedOutput = latexMathModeify(storedOutput)
-    print('Total: ' + str(len(A) * len(B)) + ';', end= ' ')
-    print(storedOutput)
+
+    return storedOutput
     
 def latexFormatArray(product):
     product = '\{' + product + '\}'
@@ -20,9 +20,16 @@ def latexMathModeify(toBeMathed): # Temporary, will update with exceptions soon
     return toBeMathed
 
 def main():
-    A = ['w', 'x', 'y', 'z']
-    B = ['a', 'b']
-    twovarproduct(A,B)
+    # List Defnition
+    A = ['twentymillion','w', 'x', 'y', 'z']
+    B = ['a', 'infinityplus', 'b']
+    
+    # Main
+    Answer = twovarproduct(A,B)
+    
+    # Output
+    print('Total: ' + str(len(A) * len(B)) + ';', end= ' ')
+    print(Answer)
 
 if __name__ == "__main__":
     main()
