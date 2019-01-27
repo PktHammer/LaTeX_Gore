@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+# Takes defined array A and B and outputs A x B.  
+# Then adds array and math mode formatting for LaTeX.
+# Outputs the total followed by the formatted array.
+
 def twovarproduct(A,B):
     storedOutput = ''
     for x in range(len(A)):
