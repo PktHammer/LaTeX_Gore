@@ -1,8 +1,4 @@
-#print(len(A)) # Discovery of length
-
-# Temporary Globals because I'm bad
-# Using lists [], make a list of the valid set
-
+#!/usr/bin/env python3
 def twovarproduct(A,B):
     storedOutput = ''
     for x in range(len(A)):
@@ -15,7 +11,6 @@ def twovarproduct(A,B):
     print('Total: ' + str(len(A) * len(B)) + ';', end= ' ')
     print(storedOutput)
     
-
 def latexFormatArray(product):
     product = '\{' + product + '\}'
     return product
