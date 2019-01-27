@@ -9,7 +9,7 @@ def twovarproduct(A,B):
     for x in range(len(A)):
         for y in range(len(B)):
             storedOutput += '(' + str(A[x]) + ', ' + str(B[y]) + '), '
-    storedOutput = storedOutput[:-2] # Slice the last character
+    storedOutput = storedOutput[:-2] # Slice the final ', ' off
     return storedOutput
     
 def latexFormatArray(product):
