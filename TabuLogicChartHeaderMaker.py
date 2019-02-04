@@ -5,7 +5,7 @@
 # \usepackage{hhline}
 
 # Script Description:
-# Creates the 2-line header + end footer for tabu with the format
+# Creates the 2-line header + end footer for tabu with the formatted for LaTeX
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
 #
 # Example Output:
