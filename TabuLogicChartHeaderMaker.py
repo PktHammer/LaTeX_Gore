@@ -3,7 +3,12 @@
 # TabuLogicChartHeaderMaker.py
 # Creates tables with the format
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
-
+#
+# Sample Output: 
+# \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]||X[7c]|} \hline
+# $ivar0$ & $ivar1$ & $nega0$ & $nega1$ & $intr0$ & $intr1$ & $final0$  \\\hline{|=|=#=|=#=|=#=|}
+# \end{tabu} 
+#
 ### MODIFY THESE VARIABLES ###
 
 # Headers
