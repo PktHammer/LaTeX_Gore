@@ -14,8 +14,8 @@
 # \end{tabu}
 #
 #
-### MODIFY THESE VARIABLES ###
 
+### MODIFY THESE VARIABLES ###
 # Headers
 HEADERSTRING = '\\begin{tabu} spread 0pt{'
 IVAR_ALIAS = 'ivar'
@@ -105,7 +105,7 @@ def addCloser(independentVariables, negations, intermediates, finalAnswers):
     return tempOne, tempTwo # Ret Tuple
 
 def main():
-    ### Import Static Variables ###
+    ### Import Variables ###
     independentVariables = VARIABLE_NUM
     independentVariableSize = VARIABLE_WIDTH
     negations = NEGATIONS_NUM
