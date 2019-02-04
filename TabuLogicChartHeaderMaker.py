@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 
-# Requirements
-# \usepackage{tabu}
-# \usepackage{hhline}
-
-# Script Description:
-# Creates the 2-line header + footer for tabu with the format
+# TabuLogicChartHeaderMaker.py
+# Creates tables with the format
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
 # Example:
 # \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]||X[7c]|} \hline
-# $ivar0$ & $ivar1$ & $nega0$ & $nega1$ & $intr0$ & $intr1$ & $final0$  \\\hline{|=|=#=|=#=|=#=|}
+# $ivar0$ & $ivar1$ & $nega0$ & $nega1$ & $intr0$ & $intr1$ & $final0$  \\\hhline{|=|=#=|=#=|=#=|}
 # \end{tabu} 
 #
 #
@@ -99,7 +95,7 @@ def addCloser(independentVariables, negations, intermediates, finalAnswers):
             titleFormatting += '=|'
         #titleFormatting = titleFormatting[:-1] # - Do not remove the last one on the FA sector
     # Concatenate line two
-    tempTwo = ' \\\\\\hline{' + titleFormatting + '}' # Prints \\\hhline{|=|=|=#=|=#=|} -like output 
+    tempTwo = ' \\\\\\hhline{' + titleFormatting + '}' # Prints \\\hhline{|=|=|=#=|=#=|} -like output 
 
     return tempOne, tempTwo # Ret Tuple
 
