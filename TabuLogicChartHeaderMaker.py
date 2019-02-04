@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+# Requirements
+# \usepackage{tabu}
+# \usepackage{hhline}
+
 # TabuLogicChartHeaderMaker.py
 # Creates tables with the format
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
