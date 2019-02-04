@@ -4,8 +4,8 @@
 # \usepackage{tabu}
 # \usepackage{hhline}
 
-# TabuLogicChartHeaderMaker.py
-# Creates tables with the format
+# Script Description:
+# Creates the 2-line header + footer for tabu with the format
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
 # Example:
 # \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]||X[7c]|} \hline
