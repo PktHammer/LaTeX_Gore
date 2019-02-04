@@ -8,10 +8,10 @@
 
 # Headers
 HEADERSTRING = '\\begin{tabu} spread 0pt{'
-IVARALIAS = 'ivar'
-NEGALIAS = 'nega'
-INTERMEDALIAS = 'intr'
-FINALANSALIAS = 'final'
+IVAR_ALIAS = 'ivar'
+NEG_ALIAS = 'nega'
+INTERMED_ALIAS = 'intr'
+FINALANS_ALIAS = 'final'
 
 # Footer
 OUTLINECLOSETABU = '\\end{tabu}'
@@ -122,22 +122,22 @@ def main():
     outLineOne += tempOne
 
     # Add IVs to L1/L2
-    tempOne, tempTwo = addElement(independentVariables,independentVariableSize,IVARALIAS,0)
+    tempOne, tempTwo = addElement(independentVariables,independentVariableSize,IVAR_ALIAS,0)
     outLineOne += tempOne
     outLineTwo += tempTwo
 
     # Add Negations to L1/L2
-    tempOne, tempTwo = addElement(negations, negSize,NEGALIAS,0)
+    tempOne, tempTwo = addElement(negations, negSize,NEG_ALIAS,0)
     outLineOne += tempOne
     outLineTwo += tempTwo
 
     # Add Intermediates to L1/L2
-    tempOne, tempTwo = addElement(intermediates, intermediateSize, INTERMEDALIAS, 0)
+    tempOne, tempTwo = addElement(intermediates, intermediateSize, INTERMED_ALIAS, 0)
     outLineOne += tempOne
     outLineTwo += tempTwo
 
     # Add Final Answer to L1/L2
-    tempOne, tempTwo = addElement(finalAnswers,finalAnswerSize,FINALANSALIAS,2)
+    tempOne, tempTwo = addElement(finalAnswers,finalAnswerSize,FINALANS_ALIAS,2)
     outLineOne += tempOne
     outLineTwo += tempTwo
 
