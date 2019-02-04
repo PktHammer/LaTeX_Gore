@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
-# TabuLogicChartHeaderMaker.py
-# Creates tables with the format
+# Requirements
+# \usepackage{tabu}
+# \usepackage{hhline}
+
+# Script Description:
+# Creates the 2-line header + end footer for tabu with the format
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
-# Example:
-# \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]||X[7c]|} \hline
-# $ivar0$ & $ivar1$ & $nega0$ & $nega1$ & $intr0$ & $intr1$ & $final0$  \\\hhline{|=|=#=|=#=|=#=|}
-# \end{tabu} 
+#
+# Example Output:
+# \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]|X[3c]||X[7c]|} \hline
+# $ivar0$ & $ivar1$ & $nega0$ & $nega1$ & $intr0$ & $intr1$ & $intr2$ & $final0$  \\\hhline{|=|=#=|=#=|=|=#=|}
+# \end{tabu}
 #
 #
 ### MODIFY THESE VARIABLES ###
@@ -26,7 +31,7 @@ VARIABLE_NUM = 2
 VARIABLE_WIDTH = 1
 NEGATIONS_NUM = 2
 NEGATIONS_WIDTH = 2
-INTERMEDIATE_NUM = 2
+INTERMEDIATE_NUM = 3
 INTERMEDIATE_WIDTH = 3
 FINALANSWERS_NUM = 1
 FINALANSWER_WIDTH = 7
@@ -132,16 +137,18 @@ def main():
     outLineTwo += tempTwo
 
     # Add Negations to L1/L2
-    tempOne, tempTwo = addElement(negations, negSize,NEG_ALIAS,0)
-    outLineOne += tempOne
-    outLineTwo += tempTwo
+    if NEGATIONS_NUM>0:
+        tempOne, tempTwo = addElement(negations, negSize,NEG_ALIAS,0)
+        outLineOne += tempOne
+        outLineTwo += tempTwo
 
     # Add Intermediates to L1/L2
-    tempOne, tempTwo = addElement(intermediates, intermediateSize, INTERMED_ALIAS, 0)
-    outLineOne += tempOne
-    outLineTwo += tempTwo
+    if INTERMEDIATE_NUM>0:
+        tempOne, tempTwo = addElement(intermediates, intermediateSize, INTERMED_ALIAS, 0)
+        outLineOne += tempOne
+        outLineTwo += tempTwo
 
-    # Add Final Answer to L1/L2
+    # Add Final Answer(s) to L1/L2
     tempOne, tempTwo = addElement(finalAnswers,finalAnswerSize,FINALANS_ALIAS,2)
     outLineOne += tempOne
     outLineTwo += tempTwo
