@@ -3,11 +3,11 @@
 # TabuLogicChartHeaderMaker.py
 # Creates tables with the format
 # | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
-#
-# Sample Output: 
+# Example:
 # \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]||X[7c]|} \hline
 # $ivar0$ & $ivar1$ & $nega0$ & $nega1$ & $intr0$ & $intr1$ & $final0$  \\\hline{|=|=#=|=#=|=#=|}
 # \end{tabu} 
+#
 #
 ### MODIFY THESE VARIABLES ###
 
@@ -22,14 +22,14 @@ FINALANS_ALIAS = 'final'
 OUTLINECLOSETABU = '\\end{tabu}'
 
 # Input Variables
-INDEPENDENTVARIABLES = 2
-INDEPENDENTVARIABLESIZE = 1
-NEGATIONS = 2
-NEGSIZE = 2
-INTERMEDIATES = 2
-INTERMEDIATESIZE = 3
-FINALANSWERS = 1
-FINALANSWERSIZE = 7
+VARIABLE_NUM = 2
+VARIABLE_WIDTH = 1
+NEGATIONS_NUM = 2
+NEGATIONS_WIDTH = 2
+INTERMEDIATE_NUM = 2
+INTERMEDIATE_WIDTH = 3
+FINALANSWERS_NUM = 1
+FINALANSWER_WIDTH = 7
 
 ### DONT TOUCH BELOW THIS LINE ###
 
@@ -101,14 +101,14 @@ def addCloser(independentVariables, negations, intermediates, finalAnswers):
 
 def main():
     ### Import Static Variables ###
-    independentVariables = INDEPENDENTVARIABLES
-    independentVariableSize = INDEPENDENTVARIABLESIZE
-    negations = NEGATIONS
-    negSize = NEGSIZE
-    intermediates = INTERMEDIATES
-    intermediateSize = INTERMEDIATESIZE
-    finalAnswers = FINALANSWERS
-    finalAnswerSize = FINALANSWERSIZE
+    independentVariables = VARIABLE_NUM
+    independentVariableSize = VARIABLE_WIDTH
+    negations = NEGATIONS_NUM
+    negSize = NEGATIONS_WIDTH
+    intermediates = INTERMEDIATE_NUM
+    intermediateSize = INTERMEDIATE_WIDTH
+    finalAnswers = FINALANSWERS_NUM
+    finalAnswerSize = FINALANSWER_WIDTH
     ###
 
     # Initialize outputs
