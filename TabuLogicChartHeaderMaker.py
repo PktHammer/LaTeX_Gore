@@ -20,6 +20,8 @@
 HEADERSTRING = '\\begin{tabu} spread 0pt{'
 
 # Output Line 2 Math Moded Aliases [Ex: ivar will output $ivar0$, $ivar1$, $ivar2$, etc.]
+#   - You can use these keys w/ find/replace on your favorite text editor to input your actual variables. 
+#       - (e.g. replace 'nega0' with '\sim p')
 IVAR_ALIAS = 'ivar'
 NEG_ALIAS = 'nega'
 INTERMED_ALIAS = 'intr'
