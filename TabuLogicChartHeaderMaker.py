@@ -5,8 +5,8 @@
 # \usepackage{hhline}
 
 # Script Description:
-# Creates the 2-line header + end footer for tabu with the formatted for LaTeX
-# | IVs(1+) || Negations(0+) || Intermediates(0+) || Final Answers(1+) |
+# Creates the 2-line header + end footer for tabu with the following structure formatted for LaTeX
+# | IVs(1+) # Negations(0+) # Intermediates(0+) # Final Answers(1+) |
 #
 # Example Output:
 # \begin{tabu} spread 0pt{|X|X||X[2c]|X[2c]||X[3c]|X[3c]|X[3c]||X[7c]|} \hline
