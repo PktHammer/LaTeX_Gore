@@ -18,6 +18,8 @@
 ### MODIFY THESE VARIABLES ###
 # Headers
 HEADERSTRING = '\\begin{tabu} spread 0pt{'
+
+# Math Moded Aliases [Ex: ivar will output $ivar0$, $ivar1$, $ivar2$, etc.]
 IVAR_ALIAS = 'ivar'
 NEG_ALIAS = 'nega'
 INTERMED_ALIAS = 'intr'
