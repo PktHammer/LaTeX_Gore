@@ -24,18 +24,24 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 % More readable counter setting
-\newcommand{\DMsetChapter}[1]{
-    \setcounter{section}{\numexpr#1}
+\newcommand{\DMchapName}[2]{
+    \setcounter{section}{\numexpr#1-1}
+    \section{#2}
 }
-\newcommand{\DMsubsectionName}[2]{
+\newcommand{\DMsubsecName}[2]{
     \setcounter{subsection}{\numexpr#1-1}
     \subsection{#2}
 }
-\newcommand{\DMquestionName}[2]{
+\newcommand{\DMqnName}[2]{
     \setcounter{subsubsection}{\numexpr#1-1}
     \subsubsection{#2}
 }
-\newcommand{\DMoneShotQuestion}[4]{
+\newcommand{\DMchapSubsecName}[3]{
+    \setcounter{section}{\numexpr#1}
+    \setcounter{subsection}{\numexpr#2-1}
+    \subsection{#3}
+}
+\newcommand{\DMchapSubsecQnName}[4]{
     \setcounter{section}{\numexpr#1}
     \setcounter{subsection}{\numexpr#2}
     \setcounter{subsubsection}{\numexpr#3-1}
@@ -65,32 +71,29 @@
 \newpage
 
 % Start of Body
-
-% Sample Entries Below
-\DMsetChapter{5}
-\DMsubsectionName{6}{Subsection Things!}
-\DMquestionName{1}{What is the rain in Spain?}
-$E = mc^2$
+% - %%%%%%%%%%%%%%
+% Sample Entries Below for counter setting
+% - %%%%%%%%%%%%%%
+% Sample 1:
+\DMchapName{2}{Chapter 2!}
 % Outputs:
-% 5.6 Subsection Things!
-% 5.6.1 What is the rain in Spain?
-% E = mc^2
+% 2 Chapter 2!
 
-\DMquestionName{2}{Something Written Here, but $x \in \mathbb{R}$}
-Blarfargar.
+% - %%%%%%%%%%%%%%
+% Sample 2: 
+\DMchapSubsecName{2}{6}{Q1, Q2}
+
+\DMqnName{1}{Question 1}
+
+\DMqnName{2}{Question 2}
 % Outputs:
-% 5.6.2 Something Written Here, but x ∈ ℝ
+% 2.6 Q1, Q2
+% 2.6.1 Question 1
+% 2.6.2 Question 2
 
-\DMsetChapter{6}
-\DMsubsectionName{1}{Pasta Theory \& Etc: 2,3,4}
-% Outputs: 
-% 6.1 Pasta Theory & Etc: 2,3,4
-
-\DMquestionName{2}{This is question 2}
-% Outputs: 
-% 6.1.2  This is question 2
-
-\DMoneShotQuestion{1}{1}{16}{Question 16}
+% - %%%%%%%%%%%%%%
+% Sample 3:
+\DMchapSubsecQnName{1}{1}{16}{Question 16}
 % Outputs:
 % 1.1.16  Question 16
 
