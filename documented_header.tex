@@ -26,15 +26,21 @@
 % More readable counter setting
 \newcommand{\DMsetChapter}[1]{
     \setcounter{section}{\numexpr#1}
-    }
+}
 \newcommand{\DMsubsectionName}[2]{
     \setcounter{subsection}{\numexpr#1-1}
     \subsection{#2}
-    }
+}
 \newcommand{\DMquestionName}[2]{
     \setcounter{subsubsection}{\numexpr#1-1}
     \subsubsection{#2}
-    }
+}
+\newcommand{\DMoneShotQuestion}[4]{
+    \setcounter{section}{\numexpr#1}
+    \setcounter{subsection}{\numexpr#2}
+    \setcounter{subsubsection}{\numexpr#3-1}
+    \subsubsection{#4}
+}
 
 % Page formatting
 \pagestyle{fancy}
