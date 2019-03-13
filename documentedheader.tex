@@ -1,0 +1,90 @@
+% Just an explanation of LaTeX settings
+
+% Base article requirements
+\documentclass[12pt]{article}
+
+% Extended top header size in order to accommodate extended header
+\usepackage[height=8in,width=7in,headheight=60pt]{geometry} 
+
+% UTF 8
+\usepackage[utf8]{inputenc}
+
+% Packages used
+\usepackage{amsmath} % AMS math
+\usepackage{amsfonts} % AMS Fonts
+\usepackage{amssymb} % AMS Symbols 
+\usepackage{fancyhdr} % Fancy headers
+\usepackage{hyperref} % hyperlinking gotos (You can * to remove them)
+\usepackage{graphicx} % Allows for certain drawn objects
+\usepackage{lastpage} % Allows for lastpage macro
+\usepackage{parskip} % Kill first paragraph indenting
+\usepackage{tikz} % Draws pictures
+\usepackage{tabu} % Table creation
+\usepackage{hhline} % Special line drawing for tables
+
+% Fast ceil/floor macro (Code from ext source)
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% More readable counter setting
+\newcommand{\DMsetChapter}[1]{
+    \setcounter{section}{\numexpr#1}
+    }
+\newcommand{\DMsubsectionName}[2]{
+    \setcounter{subsection}{\numexpr#1-1}
+    \subsection{#2}
+    }
+\newcommand{\DMquestionName}[2]{
+    \setcounter{subsubsection}{\numexpr#1-1}
+    \subsubsection{#2}
+    }
+
+% Page formatting
+\pagestyle{fancy}
+
+% Header initialization
+\fancyhead[R]{LastName \\ Page \thepage\ of \pageref*{LastPage}}
+
+% Special First Page Header
+\fancypagestyle{firstpage}{
+  \rhead{Full Name \\ Line Two - Class \\ Line Three - Assignment \\ Line 4 - Page \thepage \ of \pageref*{LastPage}}
+}
+\title{Centered Title}
+\author{Author Name}
+\date{\today}
+
+% Start Of Document
+\begin{document}
+\maketitle
+
+% Output First Page
+\thispagestyle{firstpage}
+\newpage
+
+% Start of Body
+
+% Sample Entry
+\DMsetChapter{5}
+\DMsubsectionName{6}{Subsection Things!}
+\DMquestionName{1}{What is the rain in Spain?}
+$E = mc^2$
+
+% Outputs:
+% 5.6 Subsection Things!
+% 5.6.1 What is the rain in Spain?
+% E = mc^2
+
+\DMquestionName{2}{Something Written Here, but $x \in \mathbb{R}$}
+Blarfargar.
+
+\DMsetChapter{6}
+\DMsubsectionName{1}{Pasta Theory \& Etc: 2,3,4}
+% Outputs: 6.1 Pasta Theory & Etc: 2,3,4
+
+\DMquestionName{2}{This is question 2}
+% Outputs: 6.1.2  This is question 2.
+
+
+\end{document}
+
