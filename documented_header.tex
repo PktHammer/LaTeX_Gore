@@ -2,24 +2,25 @@
 
 % Base article requirements
 \documentclass[12pt]{article} % Article doc type & font size = 12
-\usepackage[hmargin=1in, vmargin=1in]{geometry} % 1 inch margins on all sides
-\usepackage[utf8]{inputenc} % UTF-8 text encoding
+\usepackage[hmargin=1in, vmargin=1in]{geometry} % Extended top header size in order to accommodate extended header
+\usepackage[utf8]{inputenc} % UTF 8
 
 % Packages used
 \usepackage{amsmath} % AMS math
 \usepackage{amsfonts} % AMS Fonts
 \usepackage{amssymb} % AMS Symbols 
 \usepackage{fancyhdr} % Fancy headers
-\usepackage{hyperref} % hyperlinking gotos (You can * to remove them)
 \usepackage{graphicx} % Allows for certain drawn objects
 \usepackage{lastpage} % Allows for lastpage macro
 \usepackage{parskip} % Kill first paragraph indenting
 \usepackage{tikz} % Draws pictures
 \usepackage{tabu} % Table creation
 \usepackage{hhline} % Special line drawing for tables
+\usepackage{mathtools} % Fast ceil/floor macro
+\usepackage{hyperref} % hyperlinking gotos (You can * to remove them)
 
 % Fast ceil/floor macro (Code from ext source)
-\usepackage{mathtools}
+% Dep: \usepackage{mathtools}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
