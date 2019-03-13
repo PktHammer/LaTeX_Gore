@@ -2,8 +2,8 @@
 
 % Base article requirements
 \documentclass[12pt]{article} % Article doc type & font size = 12
-\usepackage[height=8in,width=7in,headheight=60pt]{geometry} % Extended top header size in order to accommodate extended header
-\usepackage[utf8]{inputenc} % UTF 8
+\usepackage[hmargin=1in, vmargin=1in]{geometry} % 1 inch margins on all sides
+\usepackage[utf8]{inputenc} % UTF-8 text encoding
 
 % Packages used
 \usepackage{amsmath} % AMS math
@@ -42,7 +42,7 @@
 % Header initialization
 \fancyhead[R]{LastName \\ Page \thepage\ of \pageref*{LastPage}}
 
-% Special First Page Header
+% Special First Page Header & Cover Page
 \fancypagestyle{firstpage}{
   \rhead{Full Name \\ Line Two - Class \\ Line Three - Assignment \\ Page \thepage \ of \pageref*{LastPage}}
 }
@@ -86,4 +86,3 @@ Blarfargar.
 
 
 \end{document}
-
